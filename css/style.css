@@ -1,0 +1,578 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf7ef;
+}
+
+/* Top Navbar */
+.top-nav {
+  background-color: #bda06a;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.top-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.top-nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+  color: #000;
+}
+/* --- Auth Buttons (Register) --- */
+.auth-buttons .register-btn {
+    background-color: #bda06a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.2s;
+    margin-right: 80px;
+}
+
+.auth-buttons .register-btn:hover {
+     background-color: #bda06a;
+}
+/* --- User Actions (After Login) --- */
+.user-actions {
+  margin-left: 20px;
+  color: #bda06a;
+  font-size: 22px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.user-actions.hidden {
+    display: none;
+}
+.user-actions:hover{
+  color: #000;
+}
+
+.profile-pic {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user-actions .icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.9rem;
+    color: var(--text-dark);
+}
+
+/* Second Navbar */
+.second-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e7decf;
+  padding: 15px 50px;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo .book {
+  font-size: 32px;
+  font-weight: 400;
+  color: #bda06a;
+}
+
+.logo .mytable {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 5px 15px;
+  width: 40%;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.search-box button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #000;
+}
+
+/*  Modal (Register/Login & Success)  */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: transparent;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal.show {
+    display: flex; /* Show using flexbox for centering */
+}
+
+.hidden { display: none !important; }
+
+.modal-content {
+    background-color: white;
+    margin: auto; /* For browsers that don't support align-items: center */
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px; /* Max width for the form */
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-content.small-modal {
+    max-width: 350px; /* Smaller width for success dialog */
+    padding: 20px;
+}
+
+.close-button {
+    color: #bda06a;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #bda06a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    color: #bda06a;
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #bda06a;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #f1e217;
+    box-shadow: 0 0 5px rgba(212, 186, 14, 0.941);
+}
+
+.login-btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color:  #bda06a;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color:  #bda06a;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    color:  black;
+    font-size: 0.9em;
+}
+
+.social-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+    color: var(--text-light);
+}
+
+.social-separator::before,
+.social-separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid  #bda06a;
+}
+
+.social-separator:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.social-separator:not(:empty)::after {
+    margin-left: .25em;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: #bda06a;
+    font-size: 1.2em;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon.google { background-color: var(--social-google); }
+.social-icon.facebook { background-color: var(--social-facebook); }
+.social-icon.instagram { background-color: var(--social-instagram); }
+.social-icon.twitter { background-color: var(--social-twitter); }
+
+.signup-prompt {
+    font-size: 0.9em;
+    color: var(--text-light);
+}
+
+.signup-prompt .create-account-link {
+    font-weight: bold;
+    color: #bda06a;
+}
+
+
+
+/* Hero Section */
+.hero {
+  background: url('../image/Frame\ 419.png') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 3px;
+ 
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+/* auto move */
+.city-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.city-section h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.slider {
+  display: flex;
+  width: 400%;
+  gap:25px;
+  animation: autoMove 10s linear infinite alternate-reverse ;
+}
+
+.slide {
+  max-width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide h3 {
+  margin-top: 15px;
+  font-size: 30px;
+  color: #222;
+}
+
+/* Auto Moving Animation */
+@keyframes autoMove {
+   from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ------------------------------------
+  HOW IT WORKS SECTION
+--------------------------------------*/
+.how-section {
+    background: #f6eadf;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.how-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+}
+
+.how-container {
+    display: flex;
+    justify-content: center;
+    gap: 160px;
+    flex-wrap: wrap;
+}
+
+.box {
+    text-align: center;
+}
+
+.box i {
+    font-size: 6.20rem;
+    color: #aa7b37;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #3a3a3a;
+}
+
+/* ------------------------------------
+  CUSTOMER REVIEW SECTION
+--------------------------------------*/
+.review-section {
+    position: relative;
+    color: white;
+}
+
+.review-section h2 {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    z-index: 2;
+}
+
+/* Background Image */
+.review-bg {
+    background: url("../image/Frame\ 30680.png") center/cover no-repeat;
+    width: 100%;
+    height: 320px;
+    /* filter: brightness(0.5); */
+}
+
+/* Review Cards */
+.review-box-container {
+    background: #c9a370;
+    display: flex;
+    justify-content: space-around;
+    gap: 60px;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.review-box {
+    text-align: center;
+}
+
+.review-box img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.review-box h3 {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.review-box p {
+    color: #fff;
+    font-size: 14px;
+}
+footer {
+    background: #f4eadf;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 7%;
+    flex-wrap: wrap;
+}
+.footer-map img{
+  width: 520px;
+  height:310px;
+}
+.footer-map p {
+    top: 120px;
+    font-size: 1.4rem;
+    color: #333;
+    margin: 6px 0;
+}
+
+.footer-map i {
+    
+    margin-right: 6px;
+    color: #aa7b37;
+}
+
+.subscribe-box {
+    width: 480px;
+    text-align: center;
+}
+
+.subscribe-box h3 {
+    font-size: 2.20rem;
+    margin-bottom: 15px;
+}
+
+.email-row {
+    display: flex;
+    gap: 10px;
+}
+
+.email-row input {
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.email-row button {
+    width: 25%;
+    padding: 10px;
+    background: #aa7b37;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.email-row button:hover {
+    background: #8f622d;
+}
+
+.footer-links {
+    background: #c7a36a;
+    padding: 30px 7%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-links .col h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links .col a {
+    display: block;
+    margin: 5px 0;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer-links .col a:hover {
+    text-decoration: underline;
+}
+
+.restaurant-links {
+    text-align: center;
+    background: #c7a36a;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    background: #1d1d1d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 7%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icons i {
+    margin: 0 8px;
+    color: white;
+    font-size: 18px;
+}
+
+.contact-bottom p {
+    font-size: 14px;
+}

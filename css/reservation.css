@@ -1,0 +1,262 @@
+/* --- Global Reset & Base Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fcf8f0; /* Light beige body background */
+}
+
+/* --- 1. HEADER & TOP NAVIGATION --- */
+.site-header {
+    background-color: #fcf8f0; /* Matches the body/card background */
+}
+.top-nav-bar {
+    display: flex;
+    justify-content: center;
+    background-color: #c9ac7f; /* Brownish-gold color for top bar */
+    padding: 8px 5%;
+}
+.top-nav-bar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 1.9em;
+}
+
+.search-and-user-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    
+    margin: 0 auto;
+    background-color: #e7decf;
+}
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #a0522d; /* Darker brown/red */
+}
+.my-table {
+    font-weight: normal;
+}
+.search-container {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 35px;
+    overflow: hidden;
+    width: 400px; /* Adjust size as needed */
+}
+.search-input {
+    border: none;
+    padding: 8px 15px;
+    flex-grow: 1;
+    font-size: 1em;
+}
+.search-btn {
+    background-color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    color: #666;
+}
+.user-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.user-icons .icon {
+    font-size: 3.2rem;
+    color: #bda06a;
+    cursor: pointer;
+}
+.profile-pic {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* --- 2. HERO BANNER --- */
+.hero-banner {
+    background-image: url('../image/reservation.png'); /* Placeholder image reference */
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    align-items: flex-end; /* Align title to the bottom */
+    position: relative;
+    padding: 20px 5%;
+}
+.page-title {
+    color: black;
+    background-color: #fcf8f0;
+    padding: 5px 15px;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* --- 3. RESTAURANT LISTINGS --- */
+.restaurant-listings-container {
+    max-width: 1000px;
+    margin: 30px auto;
+}
+.restaurant-card {
+    display: flex;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.card-image {
+    width: 35%;
+    height: 200px;
+    object-fit: cover;
+}
+.card-details {
+    width: 65%;
+    padding: 20px;
+}
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.title-row h2 {
+    font-size: 1.5em;
+    color: #a0522d;
+    margin-bottom: 5px;
+}
+.location {
+    font-size: 0.9em;
+    color: #999;
+}
+.cuisine {
+    margin: 10px 0;
+    font-size: 0.95em;
+}
+.cost-rating-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.cost strong{
+    color: #bda06a;
+    font-weight: 600;
+
+}
+/* Placeholder for the 5-star rating */
+.rating::before {
+    content: '★★★★★';
+    color: gold;
+    font-size: 1.2em;
+}
+.favorite-btn {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: #999;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.favorite-btn.active i {
+  color: #c9ac7f;
+}
+/* --- 4. FOOTER --- */
+.site-footer {
+    background-color: #c9ac7f; /* Brownish-gold color for main footer */
+    color: white;
+    padding: 40px 5%;
+}
+.footer-content-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+.footer-column ul {
+    list-style: none;
+}
+.footer-column li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.restaurant-links-row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.9em;
+}
+
+/* Copyright Bar (Bottom Dark Section) */
+.copyright-bar {
+    background-color: #333; /* Dark background */
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85em;
+    margin-top: 40px;
+}
+.social-icons i {
+    margin-left: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.contact-info {
+    text-align: right;
+}
+
+/* --- Media Queries for Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .search-and-user-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .search-container {
+        width: 100%;
+    }
+    .restaurant-card {
+        flex-direction: column; /* Stack image and details vertically */
+    }
+    .card-image {
+        width: 100%;
+        height: 150px;
+    }
+    .card-details {
+        width: 100%;
+    }
+    .footer-content-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns on mobile */
+    }
+    .restaurant-links-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+    }
+    .copyright-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}

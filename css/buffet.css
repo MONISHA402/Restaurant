@@ -1,0 +1,39 @@
+.restaurant-hero {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+.hero-image-container {
+    flex: 1; /* Takes up one part of space */
+}
+.hero-info {
+    flex: 1.5; /* Takes up more space for text */
+    padding-left: 30px;
+}
+.restaurant-tabs {
+    display: flex;
+    margin-top: 20px;
+    border-bottom: 2px solid #ccc;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+.tab {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #555;
+}
+.tab.active {
+    color: brown; /* Or the accent color */
+    border-bottom: 2px solid brown;
+}
+.overview-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 40px;
+    padding: 30px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.reserve-button{
+    color: goldenrod;
+}

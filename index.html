@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmytable</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="reservation.html">Reservation</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- Second Navigation -->
+  <div class="second-nav">
+    <div class="logo">
+      <a href="#"><span class="book">Book</span><span class="mytable">mytable</span></a>
+      <p>Never wait for your meal</p>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+      <button><i class="fa fa-search"></i></button>
+    </div>
+    <div class="auth-buttons" id="authButtons">
+        <button class="register-btn" id="registerBtn">Register</button>
+    </div>
+
+    <div class="user-actions hidden" id="userActions">
+      <a href="#"><i class="fa fa-bell" style="color: #c59d0e;margin-right: 35px;  font-size: 2.4rem;" ></i></a>
+      <a href="contact.html"><i class="fa fa-headphones" style="color: #c59d0e;margin-right: 35px; font-size: 2.4rem;" ></i></a>
+      <a href="wishlist.html"><i class="fa fa-heart" style="color: #c59d0e;margin-right: 35px; font-size: 2.4rem;" ></i></a>
+      <a href="#"><img src="image/Photo by Dani.png" alt="Profile"class="profile-pic "></a>
+    </div>
+       
+  </div>
+<!-- Register -->
+   <!-- REGISTER / LOGIN MODAL -->
+<div id="authModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="closeAuthModal">&times;</span>
+        <h2 class="modal-title">Register Free !</h2>
+
+        <form id="authForm">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Enter your e-mail" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <a href="#" class="forgot-password">Forget your password?</a>
+
+        <div class="social-separator">
+            <span>Sign Up Using</span>
+        </div>
+
+        <div class="social-login">
+            <a href="#" class="social-icon google"><i class="fab fa-google"></i></a>
+            <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</div>
+
+    <!-- <div id="successModal" class="modal">
+        <div class="modal-content small-modal">
+            <span class="close-button" id="closeSuccessModal">&times;</span>
+            <p>Login Successful!</p>
+            <button class="ok-button" id="okSuccessModal">OK</button>
+        </div>
+    </div> -->
+
+      <!-- Hero Section (for demo) -->
+  <section class="hero">
+    <h1>Book Table at your favourite restaurant and<br>get served instantly</h1>
+  </section>
+<!-- auto move -->
+  <section class="city-section">
+    <h2>Explore restaurant your city</h2>
+
+    <div class="slider" id="slider">
+        <a href="cusins.html" style="text-decoration: none;"> <div class="slide">
+            <img src="image/unsplash_AGdxYn7e-5Q.png" alt="">
+            <h3>Bangalore</h3>
+        </div></a>
+        
+        <a href="cusins.html" style="text-decoration: none;"><div class="slide">
+            <img src="image/unsplash_0sFJETeW64k.png" alt="">
+            <h3>Mumbai</h3>
+        </div></a>
+        
+        <a href="cusins.html" style="text-decoration: none;"><div class="slide">
+            <img src="image/unsplash_AGdxYn7e-5Q.png" alt="">
+            <h3>Hyderabad</h3>
+        </div></a>
+        
+        <a href="cusins.html" style="text-decoration: none;"><div class="slide">
+            <img src="image/unsplash_tsB97NwNX28.png" alt="">
+            <h3>Chennai</h3>
+        </div></a>
+        
+    </div>
+</section>
+<!-- HOW IT WORKS -->
+<section class="how-section">
+    <h2>How it works</h2>
+
+    <div class="how-container">
+        <div class="box">
+            <i class="fas fa-search"></i>
+            <p>Search restaurant</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-calendar"></i>
+            <p>Select date/time</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-chair"></i>
+            <p>Reserve your table</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <p>Get served instantly</p>
+        </div>
+    </div>
+</section>
+
+<!-- CUSTOMER REVIEW SECTION -->
+<section class="review-section">
+    <h2>Customer Reviews</h2>
+
+    <div class="review-bg"></div>
+
+    <div class="review-box-container">
+        <div class="review-box">
+            <img src="image/Photo by Patrick T'Kindt.png">
+            <h3>Akram p.</h3>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <p>Good and excellent service</p>
+        </div>
+
+        <div class="review-box">
+            <img src="image/Photo by Lesly Juarez.png">
+            <h3>David p.</h3>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <p>Good and excellent service</p>
+        </div>
+
+        <div class="review-box">
+            <img src="image/Photo by H Liu.png">
+            <h3>Gogip.</h3>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+            <p>Flexible service</p>
+        </div>
+    </div>
+</section>
+<!-- FOOTER SECTION -->
+<footer>
+
+    <div class="footer-top">
+
+        <!-- LEFT: MAP + CONTACT DETAILS -->
+        <div class="footer-map">
+            <img src="image/ChatGPT Image Jul 2, 2025, 06_41_54 PM 1.png ">
+
+            <p><i class="fas fa-phone"></i> (+91) 2340-886343</p>
+            <p><i class="fas fa-envelope"></i> info@bookmytable.com</p>
+            <p><i class="fas fa-location-dot"></i> Chennai 6432789</p>
+        </div>
+
+        <!-- RIGHT: EMAIL FORM -->
+        <div class="subscribe-box">
+            <h3>Get offers in Your Inbox</h3>
+            <div class="email-row">
+                <input type="email" placeholder="Enter your mail">
+                <button>Subscribe</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER MIDDLE LINKS -->
+    <div class="footer-links">
+
+        <div class="col">
+            <h4>Company</h4>
+            <a href="#">About us</a>
+            <a href="#">Customer Reviews</a>
+            <a href="#">Add Your Restaurant</a>
+        </div>
+
+        <div class="col">
+            <h4>Policy Info</h4>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Cookies Policy</a>
+            <a href="#">Cancellation Policy</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="col">
+            <h4>Cities</h4>
+            <a href="#">Chennai</a>
+            <a href="#">Bangalore</a>
+            <a href="#">Hyderabad</a>
+            <a href="#">Mumbai</a>
+        </div>
+
+        <div class="col">
+            <h4>Help</h4>
+            <a href="#">Booking Status</a>
+            <a href="#">Add Restaurant</a>
+        </div>
+
+    </div>
+
+
+    <!-- RESTAURANT TEXT LINKS -->
+    <div class="restaurant-links">
+        Restaurant in Chennai | Restaurant in Bangalore | Restaurant in Pune |
+        Restaurant in Hyderabad | Restaurant in Mumbai
+    </div>
+
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+        <p>© 2025 Book My Table.Co.in. All rights reserved.</p>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="contact-bottom">
+            <p><i class="fas fa-phone"></i> (+91) 2340-886343</p>
+            <p><i class="fas fa-envelope"></i> info@bookmytable.com</p>
+        </div>
+    </div>
+
+</footer>
+
+
+<script>
+// auto move
+    
+const slider = document.getElementById("slider");
+
+slider.addEventListener("mouseover", () => {
+  slider.style.animationPlayState = "paused";
+});
+
+slider.addEventListener("mouseout", () => {
+  slider.style.animationPlayState = "running";
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const authModal = document.getElementById("authModal");
+    const registerBtn = document.getElementById("registerBtn");
+    const closeAuthModal = document.getElementById("closeAuthModal");
+    const authForm = document.getElementById("authForm");
+
+    const authButtons = document.getElementById("authButtons"); // Register/Login buttons container
+    const userActions = document.getElementById("userActions"); // User icons container
+
+    // ✅ Open Modal
+    registerBtn?.addEventListener("click", () => {
+        authModal.classList.add("show");
+    });
+
+    // ✅ Close Modal when clicking X
+    closeAuthModal?.addEventListener("click", () => {
+        authModal.classList.remove("show");
+    });
+
+    // ✅ Close Modal when clicking outside box
+    window.addEventListener("click", (e) => {
+        if (e.target === authModal) authModal.classList.remove("show");
+    });
+
+    // ✅ On Login
+    authForm?.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        authModal.classList.remove("show"); // close modal
+
+        // Hide register/login buttons – show user icons
+        authButtons.classList.add("hidden");
+        userActions.classList.remove("hidden");
+
+        console.log("User logged in successfully!");
+    });
+});
+
+const profile = document.getElementById('profile');
+const dropdown = document.getElementById('profileDropdown');
+const bell = document.getElementById('bell');
+const notification = document.getElementById('notificationBox');
+
+// Toggle dropdown
+profile.addEventListener('click', () => {
+  dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  notification.style.display = 'none';
+});
+
+// Toggle notification box
+bell.addEventListener('click', () => {
+  notification.style.display = notification.style.display === 'block' ? 'none' : 'block';
+  dropdown.style.display = 'none';
+});
+
+// Hide both when clicking outside
+document.addEventListener('click', (e) => {
+  if (!profile.contains(e.target) && !dropdown.contains(e.target) &&
+      !bell.contains(e.target) && !notification.contains(e.target)) {
+    dropdown.style.display = 'none';
+    notification.style.display = 'none';
+  }
+});
+
+</script>
+</body>
+</html>
